@@ -17,3 +17,14 @@ collection of server related issues, in progress
 3. install Teradata driver on Ubuntu server:
    
    apt remove nslcd, then everything is ok.
+
+4. install/remove a .deb file on server:
+   dpkg -i package_name.deb
+   or
+   dpkg -i --force-depends package_name.deb
+   dpkg -i --force-all package_name.deb
+   to force install
+   dpkg -r package_name.deb
+   or 
+   dpkg -remove package_name.deb
+   to remove
