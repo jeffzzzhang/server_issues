@@ -13,3 +13,7 @@ collection of server related issues, in progress
    2) upload file via Putty as the following command, make change as necessary.
    "pscp C:\files_directory\the_file.txt login_name@server_ip:/x/des_dir", then password.
    3) the file stays in /x/des_dir now.
+   
+3. install Teradata driver on Ubuntu server:
+   
+   apt remove nslcd, then everything is ok.
