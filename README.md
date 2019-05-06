@@ -28,3 +28,12 @@ collection of server related issues, in progress
    or 
    dpkg -remove package_name.deb
    to remove
+
+5. add sources if you fail to install specific package:
+    1) input "sudo cp /etc/apt/sources.list /etc/apt/sources.list_backup" to backup sources list
+    2) "sudo nano /etc/apt/sources.list" to open sources.list file
+    3) add in the last 2 lines 
+       "deb http://us.archive.ubuntu.com/ubuntu/ xenial main restricted
+        deb http://la-mirrors.evowise.com/ubuntu/ xneial main restricted", and ctrl+O to overwrite current file, press entre to save, ctrl+x to quit the file
+    4) "sudo apt-get update" and "sudo apt-get upgrade" in sequence to update sources list
+    5) "sudo apt-get install unixobdc unixobdc-dev" to install them.
