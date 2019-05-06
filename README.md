@@ -34,6 +34,7 @@ collection of server related issues, in progress
     2) "sudo nano /etc/apt/sources.list" to open sources.list file
     3) add in the last 2 lines 
        "deb http://us.archive.ubuntu.com/ubuntu/ xenial main restricted
+       
         deb http://la-mirrors.evowise.com/ubuntu/ xneial main restricted", and ctrl+O to overwrite current file, press entre to save, ctrl+x to quit the file
     4) "sudo apt-get update" and "sudo apt-get upgrade" in sequence to update sources list
     5) "sudo apt-get install unixobdc unixobdc-dev" to install them.
