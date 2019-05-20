@@ -38,3 +38,25 @@ collection of server related issues, in progress
         deb http://la-mirrors.evowise.com/ubuntu/ xneial main restricted", and ctrl+O to overwrite current file, press entre to save, ctrl+x to quit the file
     4) "sudo apt-get update" and "sudo apt-get upgrade" in sequence to update sources list
     5) "sudo apt-get install unixobdc unixobdc-dev" to install them.
+
+6. scheduler tool, crontab
+issue:
+if crontab not working,
+####################################################
+check whether crontab service is launched, in root mode:
+$ service crond status or service cron status
+$ >>crond is stopped
+$ service crond start
+$ >>Starting crond:                                            [  OK  ]
+or 
+$ service crond restart
+
+$ service crond status
+& >>crond (pid  24577) is running…
+
+####################################################
+crontab -e 
+0 */6 * * * /home/zengzhang/.virtualenvs/redis/bin/python /home/zengzhang/wopr_migration/data_update.py > ~/logs/redis_update/$(date +\%Y-\%m-\%d:\%H).log 2>&1 &
+transfer the scheduler command in crontab -e:
+0 0,6,12,18 * * * ...
+
